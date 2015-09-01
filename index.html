@@ -2,7 +2,7 @@
 <head>
 <style type="text/css">
 body {
-    background-color: #000;
+    background-color: #212121;
     color: #fff;
     margin: 0;
 }
@@ -31,7 +31,7 @@ body {
     height: 240px;
     margin-left: auto;
     margin-right: auto;
-    background-image: url("bg.png");
+    background-image: url("bg2.jpg");
     background-size: 960px auto;
     background-position: 0% 50%;
 }
@@ -45,17 +45,19 @@ body {
 }
 
 .upcoming_header {
+    padding-top: 10px;
     font-family: Futura, Arial, sans-serif;
     font-size: 24px;
     margin-bottom: 10px;
 }
 
 #next_showing_text {
-    width: 300px;
+    display: inline-block;
+    max-width: 300px;
     padding: 20px;
     height: 100%;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-    /*background-color: rgba(0, 0, 0, 0.5);*/
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #body_wrap {
@@ -90,11 +92,13 @@ body {
 }
 
 #game_night {
-        background-color: #c0da5f;
+    background-color: #c0da5f;
+    background-image: url("gamenight_bg.png");
 }
 
 #manga_social {
-    background-color: #56c1ec;    
+    background-color: #56c1ec;
+    background-image: url("mangasocial_bg.png");
 }
 
 #navigation {
@@ -107,6 +111,7 @@ body {
 
 #navigation li {
     padding-left: 10px;
+    padding-right: 10px;
     font-family: Arial, sans-serif;
     font-size: 22px;
     border-bottom: 1px solid #5d5d5d;
@@ -140,29 +145,29 @@ body {
     <div id="header_text">
         Cal Animage Alpha
         <span id="header_subtext">
-            UC Bekeley's Anime Club Since 1989
+            UC Berkeley's Anime Club Since 1989
         </span>
     </div>
     <div id="next_showing">
         <div id="next_showing_text" class="upcoming_header">
             NEXT SHOWING<br/>
-            <i>Is It Wrong to Try to Pick Up Girls in a Dungeon?</i><br/>
+            <i>Death Parade</i><br/>
             <br/>
             7-10PM 4/27/15<br/>
             Dwinelle 243
         </div>
         <div id="sidebar">
+        <div id="manga_social" class="upcoming_sidebar">
+            <div class="upcoming_header">Manga Social</div>
+                Every Thursday<br/>
+                6:30-7:30PM<br/>
+                ???
+            </div>
             <div id="game_night" class="upcoming_sidebar">
                 <div class="upcoming_header">Game Nights</div>
                 Every Thursday<br/>
                 7:30-10PM<br/>
                 Dwinelle 258/259
-            </div>
-            <div id="manga_social" class="upcoming_sidebar">
-                <div class="upcoming_header">Manga Social</div>
-                Every Thursday<br/>
-                6:30-7:30PM<br/>
-                ???
             </div>
         </div>
     </div>
@@ -180,9 +185,14 @@ body {
         </div>
         <div id="sidebar">
             <ul id="navigation">
-                <li>Navigation</li>
                 <li><a href="/">Home</a></li>
                 <li><a href="/joining">Joining</a></li>
+                <li><a href="/schedules/current">Showing Schedule</a></li>
+                <li><a href="/events">Events/Calendar</a></li>
+                <li><a href="/konshuu">Konshuu</a></li>
+                <li><a href="/library">Library</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/officers">Officers</a></li>
             </ul>
         </div>
     </div>
