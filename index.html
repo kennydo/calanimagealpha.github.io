@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cal Animage Alpha</title>
+        <style>
+          @font-face {
+            font-family: "Cyntho Pro Regular";
+            src: url("assets/CynthoPro-Regular.woff");
+          }
+           body {
+              font-family: "Cyntho Pro Regular";
+/*              font-family: sans-serif;*/
+              color: #fffcf7;
+          }
+
+          .home-caption {
+              font-size: 5em;
+              text-align: center;
+          }
+          .motd {
+                  margin-top: 1em;
+                  text-align: center;
+                  font-size: 2em;
+          }
+
+          body {
+              margin: 0;
+              
+          }
+
+          .home-page {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              min-height:100vh;
+              position: relative;
+              overflow: hidden;
+          }
+
+          .home-center {
+              display: flex;
+              justify-content: center; /* align horizontal */
+              align-items: center; /* align vertical */
+              flex-direction: column;
+          }
+          .dim {
+              background:rgba(0,0,0,0.8);
+          }
+          video#bgvid { 
+              position: absolute;
+              top: 0;
+              right: 0;
+              min-width: 100%;
+              min-height: 100%;
+              z-index: -100;
+          }
+          .video-bg {
+              overflow: hidden;
+          }
+          .info-boxes {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              flex-wrap: wrap;
+          }
+
+          .info-box {
+              font-size: 2em;
+              padding: 0.5em;
+              border: 0.1em solid #fffcf7;
+              text-align: center;
+              min-width: 8em;
+              margin: 0.5em 1.5em;
+              border-radius: 0.2em;
+          }
+
+          .below-the-fold {
+              color: #fffcf7;
+              background-color: #738290;
+              display: flex;
+              flex-direction: column;
+              align-items: stretch;
+              justify-content: space-around;
+          }
+
+          .below-the-fold > div:nth-child(2n+1) {
+              background-color: #fffcf7;
+              color: #738290;
+          }
+
+          #posts {
+              display: inline-flex;
+              flex-direction: column;
+              align-items: center;
+              /*background-color: #fffcf7;*/
+              margin: 1em;
+
+          }
+
+          .post {
+              font-size: 1em;
+
+              padding: 0.5em;
+              font-family: Arial, sans-serif;
+          }
+
+          .post_title {
+              font-size: 2em;
+              border-bottom: 0.1em solid #C2D8B9;
+              margin-bottom: 0.5em;
+          }
+
+          .post a{
+              text-decoration: none;
+              color: #4f4f4f;
+              border-bottom: 1px solid #A1B5D8;
+              padding: 2px;
+          }
+          .post a:hover{
+              border-bottom: 1px solid #A1B5D8;
+              background: #E4F0D0;
+          }
+
+          .top-bar {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: flex-start;
+
+          }
+
+          .top-bar-item {
+              font-size: 1.5em;
+              padding: 0.2em 0.5em;
+              display: inline;
+          }
+
+          .home-title {
+              font-size: 2.5em;
+          }
+
+          .below-the-fold-item {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              padding: 3em;
+          }
+          .below-the-fold-item > img {
+              /*max-width:100%;*/
+              /*height: 50em;*/
+              max-height: 20em;
+              height: auto;
+              max-width: 12em;
+              width: auto;
+          }
+          .about-text {
+              padding: 3em;
+              max-width: 20em;
+          }
+
+        </style>
+    </head>
+
+    <body>
+    
+        <div class="home-page dim">
+            <div class="top-bar">
+                <div class="top-bar-item home-title">Cal Animage Alpha</div>
+                <div class="top-bar-item">Join Us</div>
+                <div class="top-bar-item">Events</div>
+                <div class="top-bar-item">Konshuu</div>
+                <div class="top-bar-item">About</div>
+                
+                
+                <div class="dummy-spacer" style="flex-grow: 1;"></div>
+                <div class="top-bar-item">Fb</div>
+                <div class="top-bar-item">Tw</div>
+            </div>
+
+            <div class="home-center">
+                <div class="home-caption">UC Berkeley's Anime Club</div>
+                <div class="motd">
+                    First General Meeting<br />
+                    Thursday, September 3 8-10 PM<br />
+                    259 Dwinelle
+                </div>
+            </div>
+            <div class="info-boxes">
+                <div class="info-box">
+                    Showing / Chill<br>
+                    Mondays<br>
+                    7:00 - 10:00 PM<br>
+                    ??? Dwinelle<br>
+                </div>
+                <div class="info-box">
+                    Manga Social<br>
+                    Thursdays<br>
+                    5:30 - 6:30 PM<br>
+                    ??? Dwinelle</div>
+                <div class="info-box">
+                    Game Night<br>
+                    Thursdays<br>
+                    7:30 - 10:00 PM<br>
+                    ??? Dwinelle<br>
+                </div>
+            </div>
+            <div class="dummy-spacer"></div>
+            <div class="video-bg">
+                <video autoplay="autoplay" id="bgvid" loop="loop" poster="assets/railgun.jpg">
+                    <source src="assets/test9.mp4">
+                </video>
+                
+            </div>
+
+        </div>
+
+        <div class="below-the-fold">
+            
+            <!--<div class="dummy-spacer"></div>
+              -->
+            <div class="below-the-fold-item" id="about">
+                            <img src="assets/annie-banner.png">
+
+                <div class="about-text">
+                <p>
+                <h2>About CAA</h2>
+                Cal Animage Alpha has been UC Berkeley's anime club since 1989. We hold anime showings every Monday and a game night every Thursday. We also have other events. All of these functions are open to the general public for free!
+                </p>
+                </div>
+
+            </div>          
+
+            <div class="below-the-fold-item" id="events">
+                
+                <div class="about-text">
+                    <h2>Weekly Events</h2>
+                    <p>Showings are held on Mondays from 7:00 PM to 10:00 PM.</p>
+                    <p>Manga Social is held on Thursdays from 5:30 PM to 6:30 PM.</p>
+                    <p>Game Nights are held on Thursdays from 7:30 PM to 10:00 PM.</p>
+                    <p>Anime Destiny is our annual anime convention, held right here on campus! For more information, visit our website.</p>
+                </div>
+                <img src="assets/cal-banner.png">              
+            </div>
+            <div class="below-the-fold-item" id="membership">
+            <img src="assets/annie-beach.png">
+                <div class="about-text">
+                <h2>Join Us</h2>
+                <p>If you wish to support the club by becoming a full member, standard membership is only $10. Members get their very own Cal Animage Alpha membership card, with a unique membership number on it.</p>
+                </div>
+
+            </div>
+            <div class="below-the-fold-item" id="konshuu">
+                <div class="about-text">
+                    <p>
+                                    <h2>Konshuu</h2>
+                        Konshuu is Cal Animage Alpha's weekly newsletter, featuring articles and fanworks from both guests and current officers. Each issue includes an overview of the series that will be shown/read during weekly meetings, information about future events, and an assortment of articles on anime culture. The latest issue is available for free at each weekly showing.
+                    </p>
+                </div>
+                <img src="assets/cal-beach.png">
+
+            </div>
+        </div>
+
+    </body>
+</html>
