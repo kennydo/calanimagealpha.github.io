@@ -16,11 +16,14 @@
           .home-caption {
               font-size: 5em;
               text-align: center;
+              margin-bottom: 1em;
           }
+
           .motd {
-                  margin-top: 1em;
-                  text-align: center;
-                  font-size: 2em;
+              margin-top: 0.5em;
+              margin-bottom: 1.5em;
+              text-align: center;
+              font-size: 1.5em;
           }
 
           body {
@@ -43,8 +46,9 @@
               align-items: center; /* align vertical */
               flex-direction: column;
           }
+
           .dim {
-              background:rgba(0,0,0,0.8);
+              background:rgba(0,0,0,0.85);
           }
           video#bgvid { 
               position: absolute;
@@ -72,6 +76,7 @@
               min-width: 8em;
               margin: 0.5em 1.5em;
               border-radius: 0.2em;
+/*              text-transform: uppercase;*/
           }
 
           .below-the-fold {
@@ -137,7 +142,7 @@
           }
 
           .home-title {
-              font-size: 2.5em;
+              font-size: 3em;
           }
 
           .below-the-fold-item {
@@ -168,15 +173,23 @@
         <div class="home-page dim">
             <div class="top-bar">
                 <div class="top-bar-item home-title">Cal Animage Alpha</div>
-                <div class="top-bar-item">Join Us</div>
+                <div class="dummy-spacer" style="flex-grow: 1;"></div>
+
+                <div class="top-bar-item">About</div>
                 <div class="top-bar-item">Events</div>
                 <div class="top-bar-item">Konshuu</div>
-                <div class="top-bar-item">About</div>
-                
-                
-                <div class="dummy-spacer" style="flex-grow: 1;"></div>
-                <div class="top-bar-item">Fb</div>
-                <div class="top-bar-item">Tw</div>
+
+                <div class="top-bar-item">Join Us</div>
+                <div class="top-bar-item">
+                  <a href="https://www.facebook.com/calanimagealpha">
+                    <img src='assets/fb.png' alt="Facebook" style="border:0;">
+                  </a>
+                </div>
+                <div class="top-bar-item">
+                  <a href="https://twitter.com/calanimagealpha">
+                    <img src='assets/tw.png' alt="Twitter" style="width:44px;height:44px;border:0;">
+                  </a>
+                </div>
             </div>
 
             <div class="home-center">
@@ -189,7 +202,7 @@
             </div>
             <div class="info-boxes">
                 <div class="info-box">
-                    Showing / Chill<br>
+                    Showings<br>
                     Mondays<br>
                     7:00 - 10:00 PM<br>
                     ??? Dwinelle<br>
@@ -246,18 +259,21 @@
             <div class="below-the-fold-item" id="membership">
             <img src="assets/annie-beach.png">
                 <div class="about-text">
-                <h2>Join Us</h2>
-                <p>If you wish to support the club by becoming a full member, standard membership is only $10. Members get their very own Cal Animage Alpha membership card, with a unique membership number on it.</p>
-                </div>
-
-            </div>
-            <div class="below-the-fold-item" id="konshuu">
-                <div class="about-text">
                     <p>
                                     <h2>Konshuu</h2>
                         Konshuu is Cal Animage Alpha's weekly newsletter, featuring articles and fanworks from both guests and current officers. Each issue includes an overview of the series that will be shown/read during weekly meetings, information about future events, and an assortment of articles on anime culture. The latest issue is available for free at each weekly showing.
                     </p>
                 </div>
+
+
+            </div>
+            <div class="below-the-fold-item" id="konshuu">
+
+                <div class="about-text">
+                <h2>Join Us</h2>
+                <p>If you wish to support the club by becoming a full member, standard membership is only $10. Members get their very own Cal Animage Alpha membership card, with a unique membership number on it.</p>
+                </div>
+
                 <img src="assets/cal-beach.png">
 
             </div>
