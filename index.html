@@ -9,7 +9,6 @@
           }
            body {
               font-family: "Cyntho Pro Regular";
-/*              font-family: sans-serif;*/
               color: #fffcf7;
           }
 
@@ -76,7 +75,6 @@
               min-width: 8em;
               margin: 0.5em 1.5em;
               border-radius: 0.2em;
-/*              text-transform: uppercase;*/
           }
 
           .below-the-fold {
@@ -93,11 +91,11 @@
               color: #738290;
           }
 
-          #posts {
+/*          #posts {
               display: inline-flex;
               flex-direction: column;
               align-items: center;
-              /*background-color: #fffcf7;*/
+              background-color: #fffcf7;
               margin: 1em;
 
           }
@@ -124,7 +122,7 @@
           .post a:hover{
               border-bottom: 1px solid #A1B5D8;
               background: #E4F0D0;
-          }
+          }*/
 
           .top-bar {
               display: flex;
@@ -132,13 +130,25 @@
               flex-wrap: wrap;
               align-items: center;
               justify-content: flex-start;
-
           }
 
           .top-bar-item {
               font-size: 1.5em;
               padding: 0.2em 0.5em;
               display: inline;
+          }
+
+          .top-bar-item a:link, a:visited {
+            text-decoration: none;
+            color: #fffcf7;
+          }
+
+          .top-bar-item a:hover {
+              color: #738290;
+          }
+
+          .home-title a:hover {
+              color: #fffcf7;
           }
 
           .home-title {
@@ -162,7 +172,14 @@
           }
           .about-text {
               padding: 3em;
-              max-width: 20em;
+              max-width: 30em;
+          }
+
+          .about-text a {
+              text-decoration: none;
+              color: #f2f2f2;
+              border-bottom: 1.5px solid #adadad;
+              padding: 1px;
           }
 
         </style>
@@ -172,14 +189,14 @@
     
         <div class="home-page dim">
             <div class="top-bar">
-                <div class="top-bar-item home-title">Cal Animage Alpha</div>
+                <div class="top-bar-item home-title"><a href="#">Cal Animage Alpha</a></div>
                 <div class="dummy-spacer" style="flex-grow: 1;"></div>
 
-                <div class="top-bar-item">About</div>
-                <div class="top-bar-item">Events</div>
-                <div class="top-bar-item">Konshuu</div>
+                <div class="top-bar-item"><a href="#">About</a></div>
+                <div class="top-bar-item"><a href="#">Events</a></div>
+                <div class="top-bar-item"><a href="#">Konshuu</a></div>
+                <div class="top-bar-item"><a href="#">Join Us</a></div>
 
-                <div class="top-bar-item">Join Us</div>
                 <div class="top-bar-item">
                   <a href="https://www.facebook.com/calanimagealpha">
                     <img src='assets/fb.png' alt="Facebook" style="border:0;">
@@ -252,7 +269,7 @@
                     <p>Showings are held on Mondays from 7:00 PM to 10:00 PM.</p>
                     <p>Manga Social is held on Thursdays from 5:30 PM to 6:30 PM.</p>
                     <p>Game Nights are held on Thursdays from 7:30 PM to 10:00 PM.</p>
-                    <p>Anime Destiny is our annual anime convention, held right here on campus! For more information, visit our website.</p>
+                    <p>Anime Destiny is our annual anime convention, held right here on campus! For more information, visit our <a href="http://www.calanimedestiny.com">website</a>.</p>
                 </div>
                 <img src="assets/cal-banner.png">              
             </div>
