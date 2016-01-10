@@ -221,12 +221,37 @@
 
           .about-text a {
               text-decoration: none;
-              color: #f2f2f2;
+              color: inherit;
               border-bottom: 0.125em solid #adadad;
           }
 
           .about-text li {
               line-height: 1.2em;
+          }
+
+          .history h3 {
+              font-family: Verdana;
+              text-transform: uppercase;
+              border-style: outset;
+              border-top: 0px;
+              border-left: 0px;
+              border-color: #FFBF3E;
+              border-radius: 1px;
+              margin-bottom: 0px;
+              padding-bottom: 0px;
+              text-align: right;
+              padding-right: 0.2em;
+          }
+
+          #events h3 {
+              padding-bottom: 0px;
+              margin-bottom: 0px;
+              text-align: center;
+              text-transform: uppercase;
+          }
+
+          .about-text .sub {
+            margin-top: .5em;
           }
 
         </style>
@@ -310,6 +335,18 @@
                 <h2>About CAA</h2>
                 Cal Animage Alpha has been UC Berkeley's anime club since 1989. We hold anime showings every Monday and a game night every Thursday. We also have other events. All of these functions are open to the general public for free!
                 </p>
+                <div class="history">
+                  <h3>A History of CAA by Rodney Romasata</h3>
+                  <p class="sub">Cal Animage Alpha ("CAA") is the flagship chapter of a loosely organized international conglomeration of anime clubs all of which share the name "Cal Animage" (often, but not always, followed by the Greek letter denoting their entrance and acceptance into the group). Originally just a group of friends (with a VCR) CAA met in any number of various rooms on the University of California, Berkeley campus; Cal Animage was formally established by Mike Tatsugawa in January 1989. </p>
+
+                  <p>While the debate is still on as to "who is the oldest anime club," CAA has the distinction and claim to fame of once being "the largest anime club outside of Japan." In 1994 (the peak of the club's popularity), the club's membership topped out at 329 (although there is some confusion as to the exact number since some didn't pay for membership that year!).</p>
+
+                  <p>Many past officers both from CAA and other Cal Animage chapters have gone on to further spread anime. The Society for the Promotion of Japanese Animation (SPJA) [was] headed by Mike Tatsugawa and runs the annual Anime Expo. Other previous officers have moved on into the anime industry, both domestic and abroad. One in particular has worked on both sides of the Pacific Ocean and has written the liner notes for the AnimEigo release of the Macross DVD.</p>
+
+                  <p>With the release of domestic anime, CAA has slowed down quite a bit. Membership has been fairly constant around 100. The main focus of the weekly Monday showings has been towards those titles that would have little chance of being released in America, yet popular enough to hold an audience's attention. A rather tall order, but the club is persisting.</p>
+
+                  <p>Come to one of our Monday evening showings between 7:00 p.m. and 10:00 p.m. and maybe you'll see why the club is still able to hold its own.</p>
+                  </div>
                 </div>
 
             </div>          
@@ -317,12 +354,20 @@
             <div class="below-the-fold-item" id="events">
                 
                 <div class="about-text">
-                    <h2>Weekly Events</h2>
-                    <p>All showings and game nights held by Cal Animage Alpha are open to the general public for free. Anyone interested in anime, manga, and Japanese anime culture is invited to attend these events.</p>
-                    <p>Showings are held on Mondays from 7:00 PM to 10:00 PM.</p>
+                    <h2>Events</h2>
+                    <h3>Weeklies</h3>
+                    <p class="sub">All showings and game nights held by Cal Animage Alpha are open to the general public for free. Anyone interested in anime, manga, and Japanese anime culture is invited to attend these events.</p>
+                    <p>Showings are held on Mondays from 7:00 PM to 10:00 PM.</br>
+                      <a href="#">Tentative Showings Schedule for Spring 2016</a>
+                    </p>
+
                     <p>Manga Social is held on Thursdays from 5:30 PM to 6:30 PM.</p>
                     <p>Game Nights are held on Thursdays from 7:30 PM to 10:00 PM.</p>
-                    <p>Anime Destiny is our annual anime convention, held right here on campus! For more information, visit our <a href="http://www.calanimedestiny.com">website</a>.</p>
+                    <p>We're always open to fun event ideas or new games to play during game nights! Have an idea or a suggestion? Share it with an <a href="#">officer</a>!</p>
+
+                    <h3>Specials</h3>
+                    <p class="sub">Anime Destiny is our annual anime convention, held right here on campus! For more information, visit our <a href="http://www.calanimedestiny.com">website</a>.</p>
+
                 </div>
                 <img src="assets/cal-banner.png">              
             </div>
@@ -331,8 +376,11 @@
                 <div class="about-text">
                     <p>
                                     <h2>Konshuu</h2>
-                        Konshuu is Cal Animage Alpha's weekly newsletter, featuring articles and fanworks from both guests and current officers. Each issue includes an overview of the series that will be shown/read during weekly meetings, information about future events, and an assortment of articles on anime culture. The latest issue is available for free at each weekly showing.
+                        Konshuu is Cal Animage Alpha's weekly newsletter, featuring articles and fanworks from both guests and current officers. Each issue includes an overview of the series that will be shown/read during weekly meetings, information about future events, and an assortment of articles on anime culture. The latest issue is available for free at each weekly showing, or you can <a href="#">read it online</a>!
                     </p>
+                    <p>
+                    Guest submissions are always welcome! To contribute, visit <a href="http://j.mp/konsub">j.mp/konsub</a>.</p>
+                    <p>If you're interested in becoming a regular contributor to the newsletter, please contact the current head - Tina (tina.nguyen@berkeley.edu or mechato on IRC) - about working in the Konshuu department</p>
                 </div>
 
 
@@ -345,10 +393,10 @@
                 <p>If you wish to support the club by becoming a full member, standard membership is only $10. Members get their very own Cal Animage Alpha membership card, with a unique membership number on it.</p>
                 <p>You can register for membership during any Monday showing. Simply ask any <a href="#">officer</a> for a membership form.</p>
                 <p>As a member of CAA, you can:</p>
-                <ul>
-                  <li>Request series from our extensive anime <a href="/library">library</a>. The club library contains over 1000 anime series and continues to grow each season.</li>
+                <ul class="sub">
+                  <li>Request series from our extensive anime <a href="#">library</a>. The club library contains over 1000 anime series and continues to grow each season.</li>
                   <li>Participate in weekly raffles for anime merchandise.</li>
-                  <li>Receive copies of the weekly newsletter <a href="/konshuu">Konshuu</a>, which contains an overview of each Monday's showings and a multitude of up-to-date articles on anime.</li>
+                  <li>Receive copies of the weekly newsletter <a href="#">Konshuu</a>, which contains an overview of each Monday's showings and a multitude of up-to-date articles on anime.</li>
                   <li>Receive discounts on special events such as our on-campus convention, <a href="http://www.calanimedestiny.com">Anime Destiny</a>.</li>
                 </ul>
                 </div>
