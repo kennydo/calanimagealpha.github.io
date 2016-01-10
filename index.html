@@ -12,17 +12,42 @@
               color: #fffcf7;
           }
 
+          .home-center {
+              display: flex;
+              justify-content: center; /* align horizontal */
+              /*align-items: center; /* align vertical */
+              flex-direction: column;
+          }          
+
           .home-caption {
               font-size: 5em;
               text-align: center;
-              margin-bottom: 1em;
+              margin: 0.1em 0.1em 1em;
           }
 
           .motd {
-              margin-top: 0.5em;
-              margin-bottom: 1.5em;
+              margin: 1em 1.5em 3em;
               text-align: center;
-              font-size: 1.5em;
+/*              font-size: 1.5em;*/
+              display: flex;
+
+          }
+
+          .motd #announce {
+              text-align: right;
+              margin-right: 3em;
+              margin-left: auto;
+              text-transform: uppercase;
+              letter-spacing: -1px;
+              word-spacing: -0.5px;
+          }
+
+          .motd #message {
+              margin-top: 0em;
+              font-size: 1.25em;
+              margin-left: 2em;
+              margin-right: auto;
+              padding-right: 20em;
           }
 
           body {
@@ -39,12 +64,7 @@
               overflow: hidden;
           }
 
-          .home-center {
-              display: flex;
-              justify-content: center; /* align horizontal */
-              align-items: center; /* align vertical */
-              flex-direction: column;
-          }
+
 
           .dim {
               background:rgba(0,0,0,0.85);
@@ -75,6 +95,12 @@
               min-width: 8em;
               margin: 0.5em 1.5em;
               border-radius: 0.2em;
+              line-height: 115%;
+          }
+
+          .info-box h2 {
+              margin: 0.25em;
+              letter-spacing: 2px;
           }
 
           .below-the-fold {
@@ -135,7 +161,12 @@
           .top-bar-item {
               font-size: 1.5em;
               padding: 0.2em 0.5em;
+              word-spacing: -1px;
               display: inline;
+          }
+
+          .top-bar-item a {
+              letter-spacing: -1.5px;
           }
 
           .top-bar-item a:link, a:visited {
@@ -162,6 +193,19 @@
               justify-content: center;
               padding: 3em;
           }
+
+          .below-the-fold-item h2 {
+              border-style: outset;
+              padding-left: 4px;
+              border-top: 0px;
+              border-right: 0px;
+              border-radius: 4px;
+          }
+
+          .below-the-fold-item h2:nth-child(2n+1) {
+              border-style: inset;
+          }
+
           .below-the-fold-item > img {
               /*max-width:100%;*/
               /*height: 50em;*/
@@ -172,14 +216,17 @@
           }
           .about-text {
               padding: 3em;
-              max-width: 30em;
+              max-width: 33em;
           }
 
           .about-text a {
               text-decoration: none;
               color: #f2f2f2;
-              border-bottom: 1.5px solid #adadad;
-              padding: 1px;
+              border-bottom: 0.125em solid #adadad;
+          }
+
+          .about-text li {
+              line-height: 1.2em;
           }
 
         </style>
@@ -212,25 +259,30 @@
             <div class="home-center">
                 <div class="home-caption">UC Berkeley's Anime Club</div>
                 <div class="motd">
-                    First General Meeting<br />
-                    Thursday, September 3 8-10 PM<br />
-                    259 Dwinelle
+                    <div id="announce">
+                      <h2>Lastest Announcement:</h2>
+                    </div>
+                    <div id="message">
+                      First General Meeting<br />
+                      ---day, Month Day 8-10 PM<br />
+                      --- Dwinelle
+                    </div>
                 </div>
             </div>
             <div class="info-boxes">
                 <div class="info-box">
-                    Showings<br>
+                    <h2>Showing</h2>
                     Mondays<br>
                     7:00 - 10:00 PM<br>
                     ??? Dwinelle<br>
                 </div>
                 <div class="info-box">
-                    Manga Social<br>
+                    <h2>Manga Social</h2>
                     Thursdays<br>
                     5:30 - 6:30 PM<br>
                     ??? Dwinelle</div>
                 <div class="info-box">
-                    Game Night<br>
+                    <h2>Game Night</h2>
                     Thursdays<br>
                     7:30 - 10:00 PM<br>
                     ??? Dwinelle<br>
@@ -266,6 +318,7 @@
                 
                 <div class="about-text">
                     <h2>Weekly Events</h2>
+                    <p>All showings and game nights held by Cal Animage Alpha are open to the general public for free. Anyone interested in anime, manga, and Japanese anime culture is invited to attend these events.</p>
                     <p>Showings are held on Mondays from 7:00 PM to 10:00 PM.</p>
                     <p>Manga Social is held on Thursdays from 5:30 PM to 6:30 PM.</p>
                     <p>Game Nights are held on Thursdays from 7:30 PM to 10:00 PM.</p>
@@ -288,7 +341,16 @@
 
                 <div class="about-text">
                 <h2>Join Us</h2>
+                <p>New Cal student? Interested in joining Cal Animage Alpha? Join our <a href="https://www.facebook.com/calanimagealpha">Facebook group</a>, like our page, and introduce yourself!</p>
                 <p>If you wish to support the club by becoming a full member, standard membership is only $10. Members get their very own Cal Animage Alpha membership card, with a unique membership number on it.</p>
+                <p>You can register for membership during any Monday showing. Simply ask any <a href="#">officer</a> for a membership form.</p>
+                <p>As a member of CAA, you can:</p>
+                <ul>
+                  <li>Request series from our extensive anime <a href="/library">library</a>. The club library contains over 1000 anime series and continues to grow each season.</li>
+                  <li>Participate in weekly raffles for anime merchandise.</li>
+                  <li>Receive copies of the weekly newsletter <a href="/konshuu">Konshuu</a>, which contains an overview of each Monday's showings and a multitude of up-to-date articles on anime.</li>
+                  <li>Receive discounts on special events such as our on-campus convention, <a href="http://www.calanimedestiny.com">Anime Destiny</a>.</li>
+                </ul>
                 </div>
 
                 <img src="assets/cal-beach.png">
