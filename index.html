@@ -19,6 +19,60 @@
               flex-direction: column;
           }          
 
+
+          .top-bar {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: flex-start;
+          }
+
+          .top-bar-item {
+              font-size: 1.5em;
+              padding: 0.2em 0.5em;
+              word-spacing: -1px;
+              display: inline;
+              position: relative;
+          }
+
+          .top-bar-item a {
+              letter-spacing: -1.5px;
+          }
+
+          .top-bar-item a:link, a:visited {
+            text-decoration: none;
+            color: #fffcf7;
+          }
+
+          .top-bar-item ul {
+              display: none;
+              list-style: none;
+              position: absolute;
+/*              top: auto;
+              bottom: auto;
+              right: auto;*/
+          }
+
+          .top-bar-item a:hover {
+              color: #738290;
+              display: block;
+          }
+
+          .top-bar-item a:hover > ul {
+              display: flex;
+              position: absolute;
+          }
+
+
+          .home-title a:hover {
+              color: #fffcf7;
+          }
+
+          .home-title {
+              font-size: 3em;
+          }
+
           .home-caption {
               font-size: 5em;
               text-align: center;
@@ -150,41 +204,6 @@
               background: #E4F0D0;
           }*/
 
-          .top-bar {
-              display: flex;
-              flex-direction: row;
-              flex-wrap: wrap;
-              align-items: center;
-              justify-content: flex-start;
-          }
-
-          .top-bar-item {
-              font-size: 1.5em;
-              padding: 0.2em 0.5em;
-              word-spacing: -1px;
-              display: inline;
-          }
-
-          .top-bar-item a {
-              letter-spacing: -1.5px;
-          }
-
-          .top-bar-item a:link, a:visited {
-            text-decoration: none;
-            color: #fffcf7;
-          }
-
-          .top-bar-item a:hover {
-              color: #738290;
-          }
-
-          .home-title a:hover {
-              color: #fffcf7;
-          }
-
-          .home-title {
-              font-size: 3em;
-          }
 
           .below-the-fold-item {
               display: flex;
@@ -200,6 +219,7 @@
               border-top: 0px;
               border-right: 0px;
               border-radius: 4px;
+              border-left-width: 5px;
           }
 
           .below-the-fold-item h2:nth-child(2n+1) {
@@ -209,9 +229,9 @@
           .below-the-fold-item > img {
               /*max-width:100%;*/
               /*height: 50em;*/
-              max-height: 20em;
+              max-height: 25em;
               height: auto;
-              max-width: 12em;
+              max-width: 15em;
               width: auto;
           }
           .about-text {
@@ -222,7 +242,13 @@
           .about-text a {
               text-decoration: none;
               color: inherit;
-              border-bottom: 0.125em solid #adadad;
+              border-bottom: 0.12em solid #adadad;
+              padding: 2px 2px 0px;
+          }
+
+          .about-text a:hover {
+              background-color: #cccccc;
+              border-radius: 2.5px;
           }
 
           .about-text li {
@@ -232,9 +258,10 @@
           .history h3 {
               font-family: Verdana;
               text-transform: uppercase;
-              border-style: outset;
+              border-style: solid;
               border-top: 0px;
               border-left: 0px;
+              border-right-width: 20px;
               border-color: #FFBF3E;
               border-radius: 1px;
               margin-bottom: 0px;
@@ -264,7 +291,12 @@
                 <div class="top-bar-item home-title"><a href="#">Cal Animage Alpha</a></div>
                 <div class="dummy-spacer" style="flex-grow: 1;"></div>
 
-                <div class="top-bar-item"><a href="#">About</a></div>
+                <div class="top-bar-item">
+                  <a href="#">About</a>
+                  <ul class="about-menu">
+                    <li id="officers">Officers</li>
+                  </ul>
+                </div>
                 <div class="top-bar-item"><a href="#">Events</a></div>
                 <div class="top-bar-item"><a href="#">Konshuu</a></div>
                 <div class="top-bar-item"><a href="#">Join Us</a></div>
@@ -285,7 +317,7 @@
                 <div class="home-caption">UC Berkeley's Anime Club</div>
                 <div class="motd">
                     <div id="announce">
-                      <h2>Lastest Announcement:</h2>
+                      <h2>Latest Announcement:</h2>
                     </div>
                     <div id="message">
                       First General Meeting<br />
@@ -391,7 +423,7 @@
                 <h2>Join Us</h2>
                 <p>New Cal student? Interested in joining Cal Animage Alpha? Join our <a href="https://www.facebook.com/calanimagealpha">Facebook group</a>, like our page, and introduce yourself!</p>
                 <p>If you wish to support the club by becoming a full member, standard membership is only $10. Members get their very own Cal Animage Alpha membership card, with a unique membership number on it.</p>
-                <p>You can register for membership during any Monday showing. Simply ask any <a href="#">officer</a> for a membership form.</p>
+                <p>You can register for membership during any Monday showing. Simply ask an <a href="#">officer</a> for a membership form.</p>
                 <p>As a member of CAA, you can:</p>
                 <ul class="sub">
                   <li>Request series from our extensive anime <a href="#">library</a>. The club library contains over 1000 anime series and continues to grow each season.</li>
