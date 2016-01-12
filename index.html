@@ -28,12 +28,23 @@
               justify-content: flex-start;
           }
 
+          .top-bar > ul {
+              display: inline-flex;
+          }
+
           .top-bar-item {
-              font-size: 1.5em;
-              padding: 0.2em 0.5em;
+              font-size: 1.75em;
+              /*padding: 0.2em 0.5em;*/
+              padding: 0px;
+              margin: 0.2em 0.5em;
               word-spacing: -1px;
               display: inline;
               position: relative;
+              z-index: 1;
+          }
+
+          .top-bar-item:hover {
+              z-index: 999;
           }
 
           .top-bar-item a {
@@ -49,24 +60,28 @@
               display: none;
               list-style: none;
               position: absolute;
-/*              top: auto;
-              bottom: auto;
-              right: auto;*/
+              font-size: 0.65em;
+              padding: 0px;
+              width: 10em;
+              word-spacing: 2px;
+              padding: 5px 0px 10px;
+          }
+
+          .top-bar-item ul li {
+            padding: 3px 1px 3px;
           }
 
           .top-bar-item a:hover {
               color: #738290;
-              display: block;
           }
 
-          .top-bar-item a:hover > ul {
-              display: flex;
+          .top-bar-item:hover > ul {
+              display: block;
               position: absolute;
           }
 
-
           .home-title a:hover {
-              color: #fffcf7;
+              color: inherit;
           }
 
           .home-title {
@@ -291,15 +306,34 @@
                 <div class="top-bar-item home-title"><a href="#">Cal Animage Alpha</a></div>
                 <div class="dummy-spacer" style="flex-grow: 1;"></div>
 
-                <div class="top-bar-item">
-                  <a href="#">About</a>
-                  <ul class="about-menu">
-                    <li id="officers">Officers</li>
-                  </ul>
-                </div>
-                <div class="top-bar-item"><a href="#">Events</a></div>
-                <div class="top-bar-item"><a href="#">Konshuu</a></div>
-                <div class="top-bar-item"><a href="#">Join Us</a></div>
+                <ul class="nav">
+                  <li class="top-bar-item">
+                    <a href="#about"><span>About</span></a>
+                    <ul>
+                      <li><a href="#">Officers</a></li>
+                    </ul>
+                  </li>
+                  <li class="top-bar-item">
+                    <a href="#events"><span>Events</span></a>
+                    <ul>
+                      <li><a href="http://www.calanimedestiny.com">Anime Destiny</a></li>
+                      <li><a href="#">Showings Schedule</a></li>
+                    </ul>
+                  </li>
+                  <li class="top-bar-item">
+                    <a href="#konshuu"><span>Konshuu</span></a>
+                    <ul>
+                      <li><a href="#">Read Online</a></li>
+                      <li><a href="http://j.mp/konsub">Contribute</a></li>
+                    </ul>
+                  </li>
+                  <li class="top-bar-item">
+                    <a href="#membership"><span>Join Us</span></a>
+                    <ul>
+                      <!-- <li><a href="#"></a></li> -->
+                    </ul>
+                  </li>
+                </ul>
 
                 <div class="top-bar-item">
                   <a href="https://www.facebook.com/calanimagealpha">
@@ -403,7 +437,7 @@
                 </div>
                 <img src="assets/cal-banner.png">              
             </div>
-            <div class="below-the-fold-item" id="membership">
+            <div class="below-the-fold-item" id="konshuu">
             <img src="assets/annie-beach.png">
                 <div class="about-text">
                     <p>
@@ -417,7 +451,7 @@
 
 
             </div>
-            <div class="below-the-fold-item" id="konshuu">
+            <div class="below-the-fold-item" id="membership">
 
                 <div class="about-text">
                 <h2>Join Us</h2>
