@@ -15,7 +15,7 @@
           .home-center {
               display: flex;
               justify-content: center; /* align horizontal */
-              /*align-items: center; /* align vertical */
+              align-items: center; /* align vertical */
               flex-direction: column;
           }          
 
@@ -34,17 +34,11 @@
 
           .top-bar-item {
               font-size: 1.75em;
-              /*padding: 0.2em 0.5em;*/
               padding: 0px;
               margin: 0.2em 0.5em;
               word-spacing: -1px;
               display: inline;
               position: relative;
-              z-index: 1;
-          }
-
-          .top-bar-item:hover {
-              z-index: 999;
           }
 
           .top-bar-item a {
@@ -80,12 +74,12 @@
               position: absolute;
           }
 
-          .home-title a:hover {
-              color: inherit;
-          }
-
           .home-title {
               font-size: 3em;
+          }
+
+          .home-title a:hover {
+              color: inherit;
           }
 
           .home-caption {
@@ -165,12 +159,42 @@
               margin: 0.5em 1.5em;
               border-radius: 0.2em;
               line-height: 115%;
+              position: relative;
           }
 
           .info-box h2 {
               margin: 0.25em;
               letter-spacing: 2px;
           }
+
+          .info-box > #next {
+              font-size: 0.8em;
+              width: 3em;
+              height: 1em;
+              padding-bottom: 0.1em;
+              color: rgba(0, 0, 0, 0.99);
+              background-color: white;
+              position: absolute;
+              bottom: -1.09em;
+              left: -0.094em;
+          }
+
+          .info-box > #show {
+              display: none;
+              position: absolute;
+              min-width: 9em;
+              min-height: 6.26em;
+              background-color: white;
+              left: -0.005em;
+              top: 0em;
+          }
+
+          .info-box > #next:hover {
+              color: rgba(0, 0, 0, 0.5);
+              cursor: default;
+          }
+
+
 
           .below-the-fold {
               color: #fffcf7;
@@ -230,7 +254,7 @@
 
           .below-the-fold-item h2 {
               border-style: outset;
-              padding-left: 4px;
+              padding-left: 6px;
               border-top: 0px;
               border-right: 0px;
               border-radius: 4px;
@@ -342,7 +366,7 @@
                 </div>
                 <div class="top-bar-item">
                   <a href="https://twitter.com/calanimagealpha">
-                    <img src='assets/tw.png' alt="Twitter" style="width:44px;height:44px;border:0;">
+                    <img src='assets/tw.png' alt="Twitter" style="width:33px;height:33px;border:0;">
                   </a>
                 </div>
             </div>
@@ -362,10 +386,14 @@
             </div>
             <div class="info-boxes">
                 <div class="info-box">
+                    <div id="next">Next</div>
                     <h2>Showing</h2>
                     Mondays<br>
                     7:00 - 10:00 PM<br>
                     ??? Dwinelle<br>
+                    <div id="show">
+<!--                       <img src='http://img00.deviantart.net/95af/i/2013/023/9/c/holo___spice_and_wolf_ii_by_ergh3-d5s7j0i.png' alt="holotho"> -->
+                    </div>
                 </div>
                 <div class="info-box">
                     <h2>Manga Social</h2>
@@ -456,7 +484,7 @@
                 <div class="about-text">
                 <h2>Join Us</h2>
                 <p>New Cal student? Interested in joining Cal Animage Alpha? Join our <a href="https://www.facebook.com/calanimagealpha">Facebook group</a>, like our page, and introduce yourself!</p>
-                <p>If you wish to support the club by becoming a full member, standard membership is only $10. Members get their very own Cal Animage Alpha membership card, with a unique membership number on it.</p>
+                <p>If you wish to support the club by becoming a full member, standard membership is only $10. Members get their very own Cal Animage Alpha membership card, with a unique club alias on it.</p>
                 <p>You can register for membership during any Monday showing. Simply ask an <a href="#">officer</a> for a membership form.</p>
                 <p>As a member of CAA, you can:</p>
                 <ul class="sub">
