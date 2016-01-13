@@ -167,9 +167,9 @@
               letter-spacing: 2px;
           }
 
-          .info-box > #next {
+          #next {
               font-size: 0.8em;
-              width: 3em;
+              width: 4.5em;
               height: 1em;
               padding-bottom: 0.1em;
               color: rgba(0, 0, 0, 0.99);
@@ -179,24 +179,52 @@
               left: -0.094em;
           }
 
-          .show {
-              /*display: none;*/
+          #show {
+              display: none;
               position: absolute;
               max-width: 1024px;
               max-height: 768px;
               min-width: 400px;
               min-height: 300px;
+              border: 5px solid white;
               background-color: white;
-              left: -0.04em;
+              left: -0.004em;
               bottom: 0.93em;
+              z-index: 9000;
+/*              background: url("http://img00.deviantart.net/95af/i/2013/023/9/c/holo___spice_and_wolf_ii_by_ergh3-d5s7j0i.png") white;
+              background-repeat: no-repeat;
+              background-size: contain;*/
           }
 
-          .info-box > #next:hover {
-              color: rgba(0, 0, 0, 0.5);
+          #series {
+              display: none;
+              position: absolute;
+              z-index: 9001;
+              width: 25em;
+              top: -2em;
+              margin-left: 1em;
+          }
+
+          #next:hover {
+              color: rgba(0, 0, 0, 0.1);
               cursor: default;
           }
 
+          #next:hover #show {
+              display: flex;
+          }
 
+          #next:hover #series {
+              display: flex;
+              color: black;
+              /*text-transform: capitalize;*/
+              /*-webkit-text-stroke: 0.001px white;*/
+              text-shadow:
+                -1px -1px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                1px 1px 0 #ffffff;
+          }
 
           .below-the-fold {
               color: #fffcf7;
@@ -388,8 +416,9 @@
             </div>
             <div class="info-boxes">
                 <div class="info-box">
-                    <div id="next">Next
-                      <img class="show" src='http://img00.deviantart.net/95af/i/2013/023/9/c/holo___spice_and_wolf_ii_by_ergh3-d5s7j0i.png' alt="holotho">
+                    <div id="next">Next Up
+                      <img id="show" src='http://img00.deviantart.net/95af/i/2013/023/9/c/holo___spice_and_wolf_ii_by_ergh3-d5s7j0i.png' alt="Next Showing"> <!-- replace picture and title for next showing weekly -->
+                      <h1 id="series">Holo tho</h1>
                     </div>
                     <h2>Showing</h2>
                     Mondays<br>
