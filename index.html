@@ -201,7 +201,7 @@
           }
 
           #next {
-              cursor: wait;
+              cursor: progress;
               font-size: 0.8em;
               width: 4.5em;
               height: 1em;
@@ -240,15 +240,17 @@
 
           #next:hover {
               color: rgba(0, 0, 0, 0.1);
-              cursor: default;
+              cursor: none;
           }
 
           #next:hover #show {
+              cursor: default;
               display: flex;
           }
 
           #next:hover #series {
               display: flex;
+              cursor: default;
               color: black;
               /*text-transform: capitalize;*/
               /*-webkit-text-stroke: 0.001px white;*/
