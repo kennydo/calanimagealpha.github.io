@@ -15,10 +15,10 @@
 
           .home-center {
               display: flex;
-              justify-content: center; /* align horizontal */
-              align-items: center; /* align vertical */
+              justify-content: center;
+              align-items: center;
               flex-direction: column;
-          }          
+          }    
 
 
           .top-bar {
@@ -87,9 +87,9 @@
           .home-caption {
               font-size: 5em;
               text-align: center;
-              margin: 0.5em 0.1em 0.5em;
+              margin: 0.5em 0em 0.3em;
           }
-
+/*
           .motd {
               margin: 1em 1.5em 3em;
               text-align: center;
@@ -112,6 +112,34 @@
               margin-left: 2em;
               margin-right: auto;
               padding-right: 20em;
+          }*/
+
+
+          .motd {
+              text-align: center;
+          }
+
+          .motd h2 {
+              text-transform: uppercase;
+              letter-spacing: -1px;
+              margin: 0px auto -3.5px;
+          }
+
+          .sep {
+              width: 40em;
+              margin: 0em auto 0.25em;
+              display: block;
+              border: none;
+              color: black;
+              height: 2px;
+              /*background: white;*/
+              background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#fff), to(#000));
+          }
+
+          #message {
+              width: 50em;
+              margin: 1em auto 5em;
+              font-size: 1.15em;
           }
 
           body {
@@ -163,7 +191,7 @@
               position: relative;
           }
 
-          .info-boxes > .info-box {
+          #first-box {
               border-bottom-left-radius: 0px;
           }
 
@@ -441,23 +469,34 @@
 
             <div class="home-center">
                 <div class="home-caption">UC Berkeley's Anime Club</div>
-                <div class="motd">
+<!--                 <div class="motd">
                     <div id="announce">
                       <h2>Latest Announcement:</h2>
                     </div>
                     <div id="message">
                       First General Meeting<br />
-                      ---day, Month Day 8-10 PM<br />
-                      --- Dwinelle
+                      -day, Month Day 8-10 PM<br />
+                      - Dwinelle
                     </div>
-                </div>
+                </div> -->
+            </div>
+            <div class="motd">
+              <h2>Latest Announcement</h2>
+              <span class="sep"></span>
+              <p id="message">
+                      First General Meeting<br />
+                      -day, Month Day 8-10 PM<br />
+                      - Dwinelle
+              </p>
+
+
             </div>
             <div class="info-boxes">
-                <div class="info-box">
+                <div class="info-box" id="first-box">
                     <div id="next">Next Up
-                      <img id="show" src='https://i.imgur.com/X4UH9pB.png' alt="Next Showing"> 
+                      <img id="show" src='https://cdn.awwni.me/rr3x.png' alt="Next Showing"> 
                       <!-- replace picture and title for next showing weekly -->
-                      <h1 id="series">pls</h1>
+                      <h1 id="series">why not</h1>
                     </div>
                     <h2>Showing</h2>
                     Mondays<br>
