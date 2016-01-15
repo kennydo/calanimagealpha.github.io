@@ -163,7 +163,7 @@ table.schedule tbody {
 
 .spoiler {
   overflow: hidden;
-  background: #fffcf7;
+  background: inherit;
 }
 
 .spoiler > div {
