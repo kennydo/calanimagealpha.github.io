@@ -97,6 +97,12 @@ body {
     padding: 0 10px 1px;
 }
 
+#main h2 {
+    margin: 2em auto 0;
+    padding: 0 10px 1px;
+    font-weight: normal;
+}
+
 /**** Schedules  ****/
 table.schedule {
     margin: 0 auto;
@@ -129,20 +135,52 @@ table.schedule tbody {
 }
 
 .schedule .date {
-    width: 120px;
+    width: 100px;
 }
 
 .schedule .series {
-    width: 420px;
+    width: 500px;
 }
 
 .schedule .location {
-    width: 120px;
+    width: 140px;
 }
+
+.archive {
+    padding: 2px 20px;
+    position: relative;
+}
+
 /**** Schedules ****/
 
 
+/**** Spoilers ****/
+.spoilerbutton {
+  position: absolute;
+  top: 0em;
+  margin: 0 10px;
+}
 
+.spoiler {
+  overflow: hidden;
+  background: #fffcf7;
+}
+
+.spoiler > div {
+  -webkit-transition: all 1s ease;
+  -moz-transition: margin 1s ease;
+  -o-transition: all 1s ease;
+  transition: margin 1s ease;
+}
+
+.spoilerbutton[value="Show"] + .spoiler > div {
+  margin-top: -150%;
+}
+
+.spoilerbutton[value="Hide"] + .spoiler {
+  padding: 5px;
+}
+/**** Spoilers ****/
 
 
 
