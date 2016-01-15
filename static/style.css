@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Cyntho Pro Regular";
-    src: url("/assets/CynthoPro-Regular.woff");
+    src: url("../assets/CynthoPro-Regular.woff");
 }
 
 body {
@@ -25,7 +25,7 @@ body {
     width: 849px;
     margin: 0 auto;
     min-height: 600px;
-    background: url('/assets/banner.png') top center no-repeat;
+    background: url('../assets/banner.png') top center no-repeat;
     vertical-align: baseline;
 }
 
@@ -94,12 +94,12 @@ body {
 
 #main h1 {
     margin: 0;
-    padding: 0 10px 1px;
+    padding: 0 15px 1px;
 }
 
 #main h2 {
     margin: 2em auto 0;
-    padding: 0 10px 1px;
+    padding: 0 15px 1px;
     font-weight: normal;
 }
 
@@ -118,19 +118,19 @@ table.schedule tbody {
     text-align: center;
 }
 
-.table-header {
+.schedule tbody tr:first-child /*.table-header*/ {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: black;
 }
 
-.table-entry {
+.schedule tbody tr:not(:first-child) /*.table-entry*/ {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #ccc;
 }
 
-.table-entry:hover {
+.schedule tbody tr:not(:first-child):hover /*.table-entry:hover*/ {
     background-color: rgba(0,0,0,0.1);
 }
 
@@ -139,7 +139,7 @@ table.schedule tbody {
 }
 
 .schedule .series {
-    width: 500px;
+    width: 420px;
 }
 
 .schedule .location {
@@ -147,7 +147,7 @@ table.schedule tbody {
 }
 
 .archive {
-    padding: 2px 20px;
+    padding: 2px 20px 5px;
     position: relative;
 }
 
