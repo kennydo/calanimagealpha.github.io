@@ -15,7 +15,6 @@ body {
     display: block;
     border: none;
     color: black;
-    /*border-radius: 2px;*/
     height: 1px;
     background: -webkit-linear-gradient(left, black, rgba(255,255,255,0.1));
     background: -moz-linear-gradient(left, black, white);
@@ -38,11 +37,6 @@ body {
     padding: 15px 0;
     font-size: 12px;
     color: white;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select:none;
-    user-select:none;
-    -o-user-select:none;
 }
 
 #navbar {
@@ -116,11 +110,14 @@ body {
     font-weight: normal;
 }
 
+#main p {
+    padding: 5px 15px;
+}
+
 /**** Schedules  ****/
 table.schedule {
     margin: 1.5em auto 3em;
     border-collapse: collapse;
-    /*padding: 2em 0 2em;*/
 }
 
 table.schedule tbody {
@@ -164,7 +161,6 @@ table.schedule tbody {
     padding: 2px 20px 5px;
     position: relative;
 }
-
 /**** Schedules ****/
 
 
@@ -225,7 +221,5 @@ table.department {
     margin: 0;
     padding-left: 20px;
 }
-
-
 /**** Officers ****/
 
