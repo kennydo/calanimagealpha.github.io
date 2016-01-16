@@ -122,8 +122,8 @@ body {
     font-weight: normal;
 }
 
-#main p {
-    padding: 5px 15px;
+p {
+    padding: 5px 20px;
 }
 
 /**** Schedules  ****/
@@ -232,6 +232,10 @@ table.department {
 .officer h4 {
     margin: 0;
     padding-left: 20px;
+}
+
+.officer p {
+    padding: 0;
 }
 /**** Officers ****/
 
