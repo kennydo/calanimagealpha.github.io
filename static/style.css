@@ -98,6 +98,18 @@ body {
 
 }
 
+#main a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 0.12em solid #adadad;
+    padding: 2px 2px 0px;
+}
+
+#main a:hover {
+    background: #cccccc;
+    border-radius: 2.5px;
+}
+
 #main h1 {
     margin: 0 0 0.5em;
     padding: 0 15px 1px;
@@ -223,3 +235,6 @@ table.department {
 }
 /**** Officers ****/
 
+#chat-box {
+    text-align: center;
+}
