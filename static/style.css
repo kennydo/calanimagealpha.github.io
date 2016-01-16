@@ -196,7 +196,7 @@ table.schedule tbody {
 }
 
 .spoilerbutton[value="Show"] + .spoiler > div {
-    margin-top: -150%;
+    margin-top: -500%;
 }
 
 .spoilerbutton[value="Hide"] + .spoiler {
