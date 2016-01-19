@@ -132,6 +132,13 @@ table.schedule {
     border-collapse: collapse;
 }
 
+.m-header {
+    font-size: 18px;
+    letter-spacing: 0px;
+    background-color: rgba(0,0,0,0.05);
+    text-transform: uppercase;
+}
+
 table.schedule tbody {
     vertical-align: middle;
 }
