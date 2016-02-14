@@ -1,0 +1,163 @@
+---
+layout: page
+title: CAA - Konshuu
+---
+<h1>Konshuu</h1>
+
+<p>Konshuu is Cal Animage Alpha's weekly newsletter, featuring articles and fanworks from both guests and current officers. Each issue includes an overview of the series that will be shown/read during weekly meetings, information about future events, and an assortment of articles on anime culture. The latest issue is available for free at each weekly showing.</p>
+
+<h2>Read Konshuu Online</h2>
+<div class="sep"></div>
+
+<p>
+    <select id="konshuu_selection">
+        <option value="default">Select an edition...</option>
+
+        <option value="43/1.pdf">Volume 43 Issue 1</option>
+
+        <option value="42/13.pdf">Volume 42 Issue 13</option>
+
+        <option value="42/12.pdf">Volume 42 Issue 12</option>
+
+        <option value="42/11.pdf">Volume 42 Issue 11</option>
+
+        <option value="42/10.pdf">Volume 42 Issue 10</option>
+
+        <option value="42/9.pdf">Volume 42 Issue 9</option>
+
+        <option value="42/8.pdf">Volume 42 Issue 8</option>
+
+        <option value="42/7.pdf">Volume 42 Issue 7</option>
+
+        <option value="42/6.pdf">Volume 42 Issue 6</option>
+
+        <option value="42/5.pdf">Volume 42 Issue 5</option>
+
+        <option value="42/4.pdf">Volume 42 Issue 4</option>
+
+        <option value="42/3.pdf">Volume 42 Issue 3</option>
+
+        <option value="42/2.pdf">Volume 42 Issue 2</option>
+
+        <option value="42/1.pdf">Volume 42 Issue 1</option>
+
+        <option value="41/12.pdf">Volume 41 Issue 12</option>
+
+        <option value="41/11.pdf">Volume 41 Issue 11</option>
+
+        <option value="41/10.pdf">Volume 41 Issue 10</option>
+
+        <option value="41/9.pdf">Volume 41 Issue 9</option>
+
+        <option value="41/8.pdf">Volume 41 Issue 8</option>
+
+        <option value="41/7.pdf">Volume 41 Issue 7</option>
+
+        <option value="41/6.pdf">Volume 41 Issue 6</option>
+
+        <option value="41/5.pdf">Volume 41 Issue 5</option>
+
+        <option value="41/4.pdf">Volume 41 Issue 4</option>
+
+        <option value="41/3.pdf">Volume 41 Issue 3</option>
+
+    </select>
+
+    Use the left and right arrow keys to change pages.
+</p>
+<p>
+  <img id="konshuu_progress" style="display: none;" src="http://calanimagealpha.com/images/progress.gif">
+</p>
+<canvas id="konshuu_reader" style="display: none; width: 100%; border:1px solid black;"></canvas>
+<script type="text/javascript" src="http://calanimagealpha.com/pdfjs/build/pdf.js"></script>
+<script type="text/javascript">
+    PDFJS.workerSrc = 'http://calanimagealpha.com/pdfjs/build/pdf.worker.js';
+    var konshuu_canvas = document.getElementById("konshuu_reader");
+    konshuu_canvas.textBaseline = "top";
+    var konshuu_progress = document.getElementById("konshuu_progress");
+
+    var rendering = null;
+
+    function renderPage(pdf, pageNumber)
+    {
+        function render(pdf, pageNumber)
+        {
+            //console.log("Started page "+pageNumber);
+            rendering = pdf.getPage(pageNumber).then(function(page) {
+                    var viewport = page.getViewport(1.0);
+
+                    var aspect = viewport.height / viewport.width;
+
+                    konshuu_canvas.width = konshuu_canvas.clientWidth * window.devicePixelRatio;
+                    konshuu_canvas.height = konshuu_canvas.width * aspect;
+
+                    rendering = page.render({
+                        canvasContext: konshuu_canvas.getContext('2d'),
+                        viewport: page.getViewport(konshuu_canvas.width / viewport.width)
+                    }).then (function() {
+                        //console.log("A - Finished page "+pageNumber);
+                        rendering = null;
+                        konshuu_canvas.getContext('2d').font = '1em Verdana';
+                        konshuu_canvas.getContext('2d').fillText("Page "+pageNumber+" of "+pdf.numPages, 30, 30);
+                    });
+                });
+        }
+
+        if(!rendering)
+        //{
+        //  rendering = rendering.then(function() { console.log("B - "+pageNumber); render(pdf, pageNumber); } );
+        //}
+        //else
+        //{
+            render(pdf, pageNumber);
+        //}
+    }
+
+    var listener = null;
+
+    document.getElementById("konshuu_selection").onchange = function()
+    {
+        var pageNumber = 1;
+        var file = document.getElementById("konshuu_selection").value;
+
+        if(file == "default")
+            return;
+
+        PDFJS.getDocument('http://calanimagealpha.com/konshuu/' + file).then(function(pdf) {
+            renderPage(pdf, 1);
+            konshuu_canvas.style.display = "block";
+            konshuu_progress.style.display = "none";
+
+            function keyupListener(e)
+            {
+                if(rendering)
+                    return;
+
+                if(e.keyCode == 37 && pageNumber != 1)
+                {
+                    pageNumber--;
+                    renderPage(pdf, pageNumber);
+                }
+                if(e.keyCode == 39 && pageNumber != pdf.numPages)
+                {
+                    pageNumber++;
+                    renderPage(pdf, pageNumber);
+                }
+            }
+            listener = keyupListener;
+            document.addEventListener("keyup", listener);
+        });
+
+            if(listener)
+            {
+                    document.removeEventListener("keyup", listener);
+            }
+
+        konshuu_progress.style.display = "block";
+    };
+</script>
+
+<h2>Contributing to Konshuu</h2>
+<div class="sep"></div>
+<p>Guest submissions are always welcome! To contribute, visit <a target="_blank" href="http://j.mp/konsub">j.mp/konsub</a>.</p>
+<p>If you're interested in becoming a regular contributor to the newsletter, please contact the current head—Tina (tina.nguyen@berkeley.edu or mechato on IRC)—about working in the Konshuu department</p>

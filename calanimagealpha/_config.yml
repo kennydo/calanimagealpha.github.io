@@ -1,0 +1,10 @@
+# Site settings
+title: Cal Animage Alpha - UC Berkeley's Anime Club
+email: webmaster@calanimagealpha.com
+description: >
+  The official Anime Club at the University of California, Berkeley.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://calanimagealpha.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
